@@ -19,7 +19,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "initial" : "cd portfolio-react-app && echo 'Installing dependencies...' && npm install && echo 'Starting React app...' && react-scripts start"
+    "initial" : "react-scripts build && react-scripts start"
   },
   "eslintConfig": {
     "extends": [
