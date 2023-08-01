@@ -27,7 +27,7 @@ const Work = () => {
                 <a href="/">
                   <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 front-bold text-lg'>Demo</button>
                 </a>
-                <a href="https://github.com/FEC-CLL/FEC">
+                <a href="https://github.com/FEC-CLL/FEC" target="_blank" rel="noreferrer">
                   <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 front-bold text-lg'>Code</button>
                 </a>
               </div>
@@ -43,7 +43,7 @@ const Work = () => {
                 <a href="/">
                   <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 front-bold text-lg'>Demo</button>
                 </a>
-                <a href="https://github.com/SDC-SwellSpinach/Products">
+                <a href="https://github.com/SDC-SwellSpinach/Products" target="_blank" rel="noreferrer">
                   <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 front-bold text-lg'>Code</button>
                 </a>
               </div>
