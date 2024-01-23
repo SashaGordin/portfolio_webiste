@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import {FaBars, FaTimes, FaGithub, FaLinkedin, FaFilePdf, FaClipboard, FaBriefcase} from 'react-icons/fa';
+import {FaBars, FaTimes, FaGithub, FaLinkedin, FaFilePdf} from 'react-icons/fa';
 import {HiOutlineMail} from 'react-icons/hi';
-import {BsFillPersonLinesFill} from 'react-icons/bs'
 import Logo from '../assets/AGF.png';
-import {Link as RouterLink, useLocation, useNavigate} from 'react-router-dom';
+import { useLocation, useNavigate} from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
 
 
@@ -18,36 +17,41 @@ const Navbar = () => {
   return (
     <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300">
       <div>
-        <img src={Logo} alt="Logo" style={{width: '30px'}} />
+        <img onClick={() => navigate('/')} src={Logo} alt="Logo" style={{width: '30px'}} />
       </div>
 
       {/* menu */}
       {hideIcons ? (
-          <button onClick={() => navigate('/')}>Back to Homepage</button>
+          <button className="hover:border-b-2 hover:border-pink-600" onClick={() => navigate('/')}>Back to Homepage</button>
       ) : (
         <ul className="hidden md:flex">
           <li>
-            <ScrollLink to="home" smooth={true} duration={500}>
+            <ScrollLink className="hover:border-b-2 hover:border-pink-600"
+            to="home" smooth={true} duration={500}>
               Home
             </ScrollLink>
           </li>
           <li>
-            <ScrollLink to="about" smooth={true} duration={500}>
+            <ScrollLink className="hover:border-b-2 hover:border-pink-600"
+            to="about" smooth={true} duration={500}>
               About
             </ScrollLink>
           </li>
           <li>
-            <ScrollLink to="skills" smooth={true} duration={500}>
+            <ScrollLink className="hover:border-b-2 hover:border-pink-600"
+            to="skills" smooth={true} duration={500}>
               Skills
             </ScrollLink>
           </li>
           <li>
-            <ScrollLink to="projects" smooth={true} duration={500}>
+            <ScrollLink className=" hover:border-b-2 hover:border-pink-600"
+            to="projects" smooth={true} duration={500}>
               Projects
             </ScrollLink>
           </li>
           <li>
-            <ScrollLink to="contact" smooth={true} duration={500}>
+            <ScrollLink className="hover:border-b-2 hover:border-pink-600"
+            to="contact" smooth={true} duration={500}>
               Contact
             </ScrollLink>
           </li>

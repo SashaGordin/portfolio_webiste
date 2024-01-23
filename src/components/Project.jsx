@@ -44,9 +44,9 @@ const Project = ({projects}) => {
   };
 
   return (
-    <div className="h-full" style={{ backgroundColor: 'white' }}>
-      <div className="h-full flex flex-col">
-        <h2 className="mt-[80px] text-3xl font-bold text-black py-4 px-4">{currentProject.projectName}</h2>
+    <div className="h-full" >
+      <div className="h-full flex items-center flex-col">
+        <h2 className="mt-[80px] text-3xl font-bold text-gray-300 py-2 border-b-4 border-pink-600">{currentProject.projectName}</h2>
         <div className="flex h-full flex-row items-center justify-center">
           {/* Video Section */}
           {currentProject.video.orientation === "vertical" && (
@@ -72,7 +72,7 @@ const Project = ({projects}) => {
           )}
           {/* Options */}
           <div className="w-1/2 p-8 flex flex-col ">
-            <div className="flex space-x-4 mb-4 text-[#0a192f]">
+            <div className="flex space-x-4 mb-4 text-gray-300">
               <button
                 className={`option-btn ${selectedOption === 'summary' && 'border-b-2 border-pink-500'}`}
                 onClick={() => handleOptionSelect('summary')}
@@ -94,7 +94,7 @@ const Project = ({projects}) => {
             </div>
 
             {/* Content based on selected option */}
-            <div className={`text-left`}>
+            <div className='text-left text-gray-300'>
               {selectedOption === 'summary' && (
                 <div>
                   <h2 className="text-2xl font-bold">Project Summary</h2>
