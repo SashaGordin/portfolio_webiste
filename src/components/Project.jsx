@@ -85,12 +85,20 @@ const Project = ({projects}) => {
               >
                 Tech Stack
               </button>
-              <button
+              <a
+                className="text-blue-500"
+                href={currentProject.github}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View on GitHub
+              </a>
+              {/* <button
                 className={`option-btn ${selectedOption === 'githubLink' && 'border-b-2 border-pink-500'}`}
                 onClick={() => handleOptionSelect('githubLink')}
               >
                 GitHub Link
-              </button>
+              </button> */}
             </div>
 
             {/* Content based on selected option */}
@@ -112,7 +120,7 @@ const Project = ({projects}) => {
                   </p>
                 </div>
               )}
-              {selectedOption === 'githubLink' && (
+              {/* {selectedOption === 'githubLink' && (
                 <div>
                   <h2 className="text-2xl font-bold">GitHub Link</h2>
                   <a
@@ -124,7 +132,7 @@ const Project = ({projects}) => {
                     View on GitHub
                   </a>
                 </div>
-              )}
+              )} */}
             </div>
           </div>
         </div>

@@ -46,7 +46,7 @@ function App() {
     Firebase and React Native. Expo proved to be rather straightforward although we had no prior experinece with it, while Firebase had a big learning curve and we had to dedicate
     an engineer to become and expert in Firebase and own it for the project. Prior to this project, I had no experience with React Native. Learning
     it as well as Firebase and Google Maps API all within a 2 week time span was challenging but gave me confidence in my ability to adapt and learn
-    new skills.`, video: {link: '/videos/FEC.mp4',  orientation: "horizontal"}},
+    new skills.`, video: {link: '/videos/MVP.mp4',  orientation: "horizontal"}},
     { image: BlueOcean, projectId: "BlueOcean", projectName: 'One Adventure', github: "https://github.com/One-Piece-Blue-Ocean/OneAdventure", summary: "A social networking mobile application designed to allow users to find and invite friends to nearby outdoor adventures.", explanation: `I built this application alongside 5 other software engineers. I was personally responsible for building out the map component.
     I used an events API and partenered with the Google's Map API I was able to create a interactive map where the user could move around to
     different locations in the US and find outdoors events in the area. The user could move around the map manually while also entering a zipcode
