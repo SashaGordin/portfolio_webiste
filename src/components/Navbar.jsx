@@ -61,34 +61,36 @@ const Navbar = () => {
       )}
 
       {/* hamburger */}
+      {!hideIcons && (
       <div onClick={handleClick} className="md:hidden z-10">
         {!nav ? <FaBars /> : <FaTimes />}
       </div>
+      )}
 
       {/* Mobile menu */}
       <ul className={!nav ? "hidden" : "absolute top-0 left-0 w-full h-screen  bg-[#0a192f] flex flex-col justify-center items-center"}>
         <li className='py-6 text-4xl'>
-          <ScrollLink to="home" smooth={true} duration={500}>
+          <ScrollLink to="home" smooth={true} duration={500} onClick={handleClick}>
             Home
           </ScrollLink>
         </li>
         <li className='py-6 text-4xl'>
-          <ScrollLink to="about" smooth={true} duration={500}>
+          <ScrollLink to="about" smooth={true} duration={500} onClick={handleClick}>
             About
           </ScrollLink>
         </li>
         <li className='py-6 text-4xl'>
-          <ScrollLink to="skills" smooth={true} duration={500}>
+          <ScrollLink to="skills" smooth={true} duration={500} onClick={handleClick}>
             Skills
           </ScrollLink>
         </li>
         <li className='py-6 text-4xl'>
-          <ScrollLink to="projects" smooth={true} duration={500}>
+          <ScrollLink to="projects" smooth={true} duration={500} onClick={handleClick}>
             Projects
           </ScrollLink>
         </li>
         <li className='py-6 text-4xl'>
-          <ScrollLink to="contact" smooth={true} duration={500}>
+          <ScrollLink to="contact" smooth={true} duration={500} onClick={handleClick}>
             Contact
           </ScrollLink>
         </li>

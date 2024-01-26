@@ -43,17 +43,24 @@ const Project = ({projects}) => {
     setSelectedOption(option);
   };
 
+  const maxWidthStyle = window.innerWidth >= 768
+  ? { maxWidth: `calc((100vh - 140px) * ${aspectRatio / 2})` }
+  : { maxWidth: '80%' };
+
+
   return (
     <div className="h-full" >
       <div className="h-full flex items-center flex-col">
-        <h2 className="mt-[80px] text-3xl font-bold text-gray-300 py-2 border-b-4 border-pink-600">{currentProject.projectName}</h2>
-        <div className="flex h-full flex-row items-center justify-center">
+        <h2 className="mt-[80px] text-3xl font-bold text-gray-300 py-2 border-b-4 border-pink-600 my-4">{currentProject.projectName}</h2>
+        <div className="flex h-full flex-col md:flex-row items-center justify-center">
           {/* Video Section */}
           {currentProject.video.orientation === "vertical" && (
             <div className="flex justify-center items-center w-full md:w-1/2">
               <div
-                className="px-10"
-                style={{ maxWidth: `calc((100vh - 200px) * ${aspectRatio/2})`, maxHeight: 'calc(80vh - 80px)', width: '100%' }}
+                className={`px-10`}
+                style={{ // Default to full width
+                  ...maxWidthStyle,
+                  maxHeight: 'calc(80vh - 80px)', width: '100%' }}
               >
                 <video className="object-cover w-full h-full" controls>
                   <source src={videoUrl} type="video/mp4" />
@@ -62,7 +69,7 @@ const Project = ({projects}) => {
             </div>
           )}
           {currentProject.video.orientation === "horizontal" && (
-            <div className="w-1/2 h-full flex justify-center items-center">
+            <div className="w-full md:w-1/2 h-full flex justify-center items-center">
              <div className="w-full px-10 max-h-full overflow-hidden" style={{ maxHeight: '80vh', maxWidth: '100%' }}>
                <video className="w-full h-auto object-contain" controls>
                  <source src={videoUrl} type="video/mp4" />
@@ -71,7 +78,7 @@ const Project = ({projects}) => {
            </div>
           )}
           {/* Options */}
-          <div className="w-1/2 p-8 flex flex-col ">
+          <div className="w-full md:w-1/2 p-8 flex flex-col ">
             <div className="flex space-x-4 mb-4 text-gray-300">
               <button
                 className={`option-btn ${selectedOption === 'summary' && 'border-b-2 border-pink-500'}`}
@@ -93,12 +100,6 @@ const Project = ({projects}) => {
               >
                 View on GitHub
               </a>
-              {/* <button
-                className={`option-btn ${selectedOption === 'githubLink' && 'border-b-2 border-pink-500'}`}
-                onClick={() => handleOptionSelect('githubLink')}
-              >
-                GitHub Link
-              </button> */}
             </div>
 
             {/* Content based on selected option */}
@@ -120,19 +121,6 @@ const Project = ({projects}) => {
                   </p>
                 </div>
               )}
-              {/* {selectedOption === 'githubLink' && (
-                <div>
-                  <h2 className="text-2xl font-bold">GitHub Link</h2>
-                  <a
-                    className="text-blue-500"
-                    href={currentProject.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    View on GitHub
-                  </a>
-                </div>
-              )} */}
             </div>
           </div>
         </div>
