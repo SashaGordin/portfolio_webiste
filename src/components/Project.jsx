@@ -92,14 +92,14 @@ const Project = ({projects}) => {
               >
                 Tech Stack
               </button>
-              <a
+              {currentProject.github && <a
                 className="text-blue-500"
                 href={currentProject.github}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 View on GitHub
-              </a>
+              </a>}
             </div>
 
             {/* Content based on selected option */}

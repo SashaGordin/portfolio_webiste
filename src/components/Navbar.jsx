@@ -47,7 +47,7 @@ const Navbar = () => {
           </li>
           <li>
             <ScrollLink className=" hover:border-b-2 hover:border-pink-600"
-            to="projects" smooth={true} duration={500}>
+            to="projects" smooth={true} duration={500} offset={-80}>
               Projects
             </ScrollLink>
           </li>
@@ -80,12 +80,12 @@ const Navbar = () => {
           </ScrollLink>
         </li>
         <li className='py-6 text-4xl'>
-          <ScrollLink to="skills" smooth={true} duration={500} onClick={handleClick}>
+          <ScrollLink to="skills" smooth={true} duration={500} onClick={handleClick} offset={-20}>
             Skills
           </ScrollLink>
         </li>
         <li className='py-6 text-4xl'>
-          <ScrollLink to="projects" smooth={true} duration={500} onClick={handleClick}>
+          <ScrollLink to="projects" smooth={true} duration={500} onClick={handleClick} offset={-80}>
             Projects
           </ScrollLink>
         </li>

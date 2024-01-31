@@ -10,6 +10,7 @@ import FEC from '../src/assets/FEC.jpg'
 import SDC from '../src/assets/SDC.jpg'
 import MVP from '../src/assets/MVP.png'
 import BlueOcean from '../src/assets/BO.png'
+import InPilot from '../src/assets/InPilot.png'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Element } from 'react-scroll';
 
@@ -18,6 +19,10 @@ function App() {
 
 
   const projects = [
+    { image: InPilot, projectId: "InPilot", projectName: 'InPilot', summary: "An application which allows users to create sequences for their LinkedIn connections.", explanation: `I came into this project after it was already started. My responsibility was to build the algorithm for scraping a user's LinkedIn inbox and displaying that information on our frontend application.
+    My initial challenge was to come into a new code base and figure out how it was built. Then after building out the intial algorithm, I was tasked with speeding up the process wherever I could. Some of my optimizations included only scraping users with whom there was an actual conversation, to exclude all of the ads, and making sure not to scrape data that we already had
+    in our database by tracking LinkedIn URL's.` , techStack: `The tech stack for this application included JavaScript, MongoDB, and Puppeteer. I had no prior experience with Puppeteer which made it difficult, however, after a few weeks I learned some tricks to help me out, such as making sure to throw in delays in between page loads, to give Puppeteer enough time to find the classes.
+    Additionally, using Chrome Developer Tools was very helpful in identifying the correct DOM elements to select.`, video: {link: '/videos/InPilot.mp4',  orientation: "horizontal"}},
     { image: FEC, projectId: "FEC", projectName: 'Frontend Capstone', github: "https://github.com/FEC-CLL/FEC", summary: "This frontend application was built based off of an amazon product description page.", explanation: `
     I built this frontend page alongside 3 other software engineers. Each engineer was responsible for their particular component. The components consisted of Product Description, Ratings and Reviews, Questions and Answers, and Related Items.
     I was responsible for the Questions and Answers component which included several features such as a Search Bar to filter questions based off of keyword, an add answer feature, an add question feature, ability to upvote a helpful question/answer
@@ -56,7 +61,7 @@ function App() {
     Firebase and React Native. Expo proved to be rather straightforward although we had no prior experinece with it, while Firebase had a big learning curve and we had to dedicate
     an engineer to become and expert in Firebase and own it for the project. Prior to this project, I had no experience with React Native. Learning
     it as well as Firebase and Google Maps API all within a 2 week time span was challenging but gave me confidence in my ability to adapt and learn
-    new skills.`, video: {link: '/videos/BO.mp4',  orientation: "vertical"}},
+    new skills.`, video: {link: '/videos/BO.mp4',  orientation: "vertical"}}
   ]
 
   return (
